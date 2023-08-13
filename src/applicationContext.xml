@@ -1,0 +1,10 @@
+<beans>
+    <bean id="page" class="com.glx.bookshop.controllers.PageController"/>
+    <bean id="user" class="com.glx.bookshop.controllers.UserController">
+        <property name="userService" ref="userService"/>
+    </bean>
+    <bean id="userService" class="com.glx.bookshop.services.Impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+    <bean id="userDao" class="com.glx.bookshop.dao.Impl.UserDaoImpl"/>
+</beans>
